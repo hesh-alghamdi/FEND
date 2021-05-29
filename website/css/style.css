@@ -1,0 +1,160 @@
+@import url('normalize/normalize.css');
+
+* {
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  background-color: #d0e8f2;
+}
+
+.container {
+  padding: 2em;
+}
+
+header {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  word-spacing: 10px;
+}
+
+#entry-section {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
+/* Since they all use the same font, why repeat it everytime :D */
+#entry-section label,
+input,
+textarea,
+#userFeelings,
+#generate,
+#results {
+  font-family: 'PT Sans', sans-serif;
+}
+
+#entry-section label {
+  align-self: center;
+  font-size: 1.5em;
+}
+
+input,
+textarea {
+  border: 1px solid;
+  border-radius: 6px;
+  width: 70%;
+  align-self: center;
+  background-color: aliceblue;
+  font-size: 1.3em;
+  margin: 0.5em 0;
+}
+
+#generate {
+  width: auto;
+  align-self: center;
+  margin-top: 1.3em;
+  border-radius: 6px;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em 2em;
+  background-color: #00303f;
+  color: white;
+}
+
+#result-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: 'weather feelings';
+  margin-top: 5em;
+  color: white;
+}
+
+.weather-date {
+  grid-area: weather;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 1em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#date,
+#temp,
+#weatherDescription {
+  font-size: 1.5em;
+  font-family: 'Rubik', sans-serif;
+  background-color: transparent;
+}
+
+#temp {
+  margin-top: 2em;
+}
+
+#weatherIcons {
+  display: none;
+  width: 80%;
+  align-self: center;
+  background-color: transparent;
+}
+
+#userFeelings {
+  grid-area: feelings;
+  padding: 1em;
+  text-align: justify;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 790px) {
+  #entry-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 'city feelings-area';
+    text-align: center;
+  }
+
+  #entry-section label {
+    font-size: 2em;
+  }
+
+  input,
+  textarea {
+    font-size: 1.7em;
+    padding: 0.8em;
+  }
+
+  .city-entery,
+  .zip-entery {
+    grid-area: city;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feelings-entery {
+    grid-area: feelings-area;
+  }
+
+  #generate {
+    position: relative;
+    left: 75%;
+    width: 50%;
+  }
+
+  #date,
+  #temp {
+    font-size: 2em;
+  }
+
+  #userFeelings {
+    font-size: 2.2em;
+  }
+
+  #weatherIcons {
+    width: 30%;
+  }
+}

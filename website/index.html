@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:ital,wght@1,900&family=Rubik:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather Journal App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h2>Weather Journal App</h2>
+      </header>
+      <section id="entry-section">
+        <div class="city-entery">
+          <label for="city">Enter your city name</label>
+          <input type="text" name="city" id="city" placeholder="City Name" />
+        </div>
+        <!-- If you like to replace city name with zip code -->
+        <!-- <div class="zip-entery">
+          <label for="zip">Enter your city's ZIP code</label>
+          <input type="text" name="zip" id="zip" placeholder="ZIP code" />
+        </div> -->
+        <div class="feelings-entery">
+          <label for="feelings">How are you feeling today?</label>
+          <textarea
+            name="feelings"
+            id="feelings"
+            cols="30"
+            rows="1"
+            placeholder="Write how you feel"
+          ></textarea>
+        </div>
+        <button type="submit" id="generate">Generate</button>
+      </section>
+      <section id="result-section">
+        <div class="weather-date">
+          <div id="date"></div>
+          <div id="temp"></div>
+          <img src="" alt="Weather Icon" id="weatherIcons" />
+          <div id="weatherDescription"></div>
+        </div>
+        <div id="userFeelings"></div>
+      </section>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
