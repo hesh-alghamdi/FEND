@@ -1,0 +1,12 @@
+@import 'variables';
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../media/background.png');
+  font-family: $main-font;
+}
