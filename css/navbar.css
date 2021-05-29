@@ -1,0 +1,194 @@
+/*
+* I used https://autoprefixer.github.io to add
+* vendor prefixes to my CSS
+*
+/* Mobile-First approach */
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 4em;
+    background-color: #22292F;
+    background-image: url("../media/headerBackgroundH.png");
+    background-size: 75em;
+    padding: 10px 0;
+    margin: 0;
+    -webkit-transition: top 0.6s ease-in-out;
+    -o-transition: top 0.6s ease-in-out;
+    transition: top 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.nav-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 15px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.logo {
+    height: 2.5em;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin: 0.8em;
+}
+
+.menu-icon {
+    font-size: 2.7em;
+    color: #fff;
+    line-height: 50px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
+.menu-icon-rotate {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+nav {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #3D4852;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    top: 5em;
+    width: 100%;
+    left: 0;
+}
+
+.navVisible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.active-nav-item {
+    background-color: peru;
+}
+
+.nav-link {
+    display: flex;
+    padding: 12px;
+    color: #DAE1E7;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-size: 1.3em;
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+}
+
+@media (min-width:600px) and (max-width: 970px) {
+    header {
+        position: fixed;
+        right: 0;
+        width: 12%;
+        grid-area: navbar;
+        height: 80vh;
+        background-image: url(../media/headerBackgroundV.png);
+        background-size: 11em;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 88%;
+    }
+
+    .nav-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        padding: 0 15px;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+
+    .nav-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+        font-size: 1em;
+    }
+
+    .logo {
+        height: 3.8em;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        margin: 0.8em;
+        position: absolute;
+        top: 50%;
+    }
+
+    .menu-icon {
+        font-size: 3.8em;
+        color: #fff;
+        line-height: 50px;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+        margin-top: 0.5em;
+    }
+}
+
+@media (min-width: 971px) {
+    header {
+        height: auto;
+    }
+
+    nav {
+        visibility: visible;
+        opacity: 1;
+        width: auto;
+        position: inherit;
+        background-color: transparent;
+    }
+
+    .logo {
+        height: 3.5em;
+    }
+
+    .nav-list {
+        display: inline-flex;
+    }
+
+    .active-nav-item {
+        background-color: rgba(205, 133, 63, 0.4);
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
