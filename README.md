@@ -11,5 +11,4 @@ A personal blog that I created from scratch to test my abilities on:
 - Wide screen layout
 - Post page example
 
-# TO-DO list
-**I will try to update and add new things I learn through my course duration**
+# [Live preview of the project]( https://hesh-alghamdi.github.io/blog/)
