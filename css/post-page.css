@@ -1,0 +1,49 @@
+@import url(common/navbar.css);
+@import url(common/sidebar.css);
+@import url(change/posts.css);
+@import url(common/footer.css);
+
+body {
+    background-color: #cfd3ce;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-color: #495464;
+    border-radius: 12px;
+    font-size: 1.4em;
+    color: #f4f4f2;
+}
+
+@media (max-width:600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "post"
+            "footer";
+        grid-gap: 0.8em;
+        margin: 1em;
+    }
+}
+
+/* For iPad/larg-ish screens */
+@media(min-width:601px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header header header header header header header"
+            "post post post post post sidebar sidebar"
+            "footer footer footer footer footer footer footer";
+        grid-gap: 1rem;
+        margin: 1em;
+    }
+}

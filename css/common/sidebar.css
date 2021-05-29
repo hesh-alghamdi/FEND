@@ -1,0 +1,104 @@
+/* For small screens */
+@media (max-width:600px) {
+    .sidebar-section {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sidebar {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .personal-photo {
+        width: 30%;
+    }
+
+    .sidebar h4 {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 500;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .sidebar p {
+        padding: 0 1rem;
+        line-height: 2rem;
+        text-align: justify;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 900;
+        font-size: 0.7em;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .social .lab {
+        font-size: 8.8vw;
+        padding: 0;
+        color: #f4f4f2;
+    }
+
+    .social .lab:hover {
+        transition: all 0.3s ease;
+        color: darkGray;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* For large screens */
+@media(min-width:601px) {
+    .sidebar-section {
+        grid-area: sidebar;
+        width: 100%;
+        align-self:
+    }
+
+    .sidebar {
+        padding: 1em;
+        height: max-content;
+        text-align: center;
+    }
+
+    .personal-photo {
+        width: 40%;
+    }
+
+    .sidebar h4 {
+        font-family: 'Roboto Slab', serif;
+        font-weight: 500;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .sidebar p {
+        padding: 0 1rem;
+        line-height: 2rem;
+        text-align: justify;
+        font-size: 0.8em;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 900;
+    }
+
+    .social {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .social .lab {
+        font-size: 2em;
+        padding: 0;
+        color: #f4f4f2;
+    }
+
+    .social .lab:hover {
+        transition: all 0.3s ease;
+        color: darkGray;
+    }
+}

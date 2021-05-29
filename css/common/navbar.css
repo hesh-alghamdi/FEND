@@ -1,0 +1,127 @@
+/* For small screens */
+@media (max-width:600px) {
+
+    /* Header Section */
+    .header-container {
+        grid-area: header;
+    }
+
+    .header {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    /* Brand Section */
+    .brand {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header a {
+        text-decoration: none;
+        color: #f4f4f2;
+    }
+
+    .logo {
+        margin: 0;
+        width: 20vw;
+    }
+
+    .title {
+        font-family: 'Comfortaa', cursive;
+        font-weight: 700;
+        font-size: 8.2vw;
+        text-align: center;
+        margin: 0;
+        word-wrap: normal;
+    }
+
+    .nav-bottons {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-bottons a {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        border-radius: 50%;
+        font-size: 8.5vw;
+    }
+
+    .nav-bottons a:hover {
+        color: darkGray;
+        transition: all 0.4s ease;
+    }
+}
+
+/* -------------------------------------------------------- */
+/* For large screens */
+@media(min-width:601px) {
+
+    /* Header Section */
+    .header-container {
+        grid-area: header;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Brand Section */
+    .header a {
+        text-decoration: none;
+        color: #f4f4f2;
+    }
+
+    .brand {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        grid-area: logo;
+        margin: 1.9rem;
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        font-family: 'Comfortaa', cursive;
+        font-weight: 700;
+        font-size: 1.8em;
+        margin: 0;
+        align-self: center;
+        text-align: center;
+        word-wrap: normal;
+    }
+
+    .nav-bottons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-self: center;
+        margin: 0;
+    }
+
+    .nav-bottons a {
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 0 0.2em;
+        font-size: 2.2em;
+    }
+
+    .nav-bottons a:hover {
+        color: darkGray;
+        transition: all 0.4s ease;
+    }
+}
