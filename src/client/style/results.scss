@@ -1,0 +1,27 @@
+@import 'entry-results.scss';
+#results {
+  grid-area: results;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $sub-font;
+  div {
+    font-size: $basicFontSize * 1.3;
+    line-height: $margins;
+    text-align: left;
+    font-weight: 700;
+  }
+  span {
+    font-weight: 500;
+  }
+  h3 {
+    font-size: $basicFontSize * 1.8;
+    margin-bottom: $margins;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  #results {
+    margin-top: $margins * 2;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+#entry-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px;
+  gap: 0px 4em;
+  grid-template-areas: 'entry results';
+  text-align: center;
+  margin: $margins * 3;
+  padding: $margins/1.5;
+}
+@media (max-width: 768px) {
+  #entry-results {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: $margins * 3;
+    padding: $margins/1.5;
+  }
+}

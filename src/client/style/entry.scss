@@ -1,0 +1,29 @@
+@import 'entry-results.scss';
+
+#entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  grid-area: entry;
+  font-family: $sub-font;
+  font-size: $basicFontSize * 1.3;
+  border-radius: 8px;
+  border: 0;
+  padding: 0.5em;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+input[type='url'] {
+  background-color: $sub-color;
+}
+input[type='submit'] {
+  background-color: $off-color;
+  &:hover {
+    cursor: pointer;
+  }
+}

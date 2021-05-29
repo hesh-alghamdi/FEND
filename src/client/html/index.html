@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Noto+Sans+TC:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/c703ad8cc7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Evaluate a news article with Natural Language Processing</title>
+  </head>
+  <body>
+    <header>
+      <h2 id="main-title">
+        Evaluate a news article with Natural Language Processing
+      </h2>
+      <h4 id="sub-title">
+        By using MeaningCloud Sentiment Analysis API to determine the how
+        sentiment is an article on the internet. <br />
+        Just submit a URL of an article in the box below.
+      </h4>
+    </header>
+    <section id="entry-results">
+      <section id="entry">
+        <form action="" onsubmit="return Client.handleSubmit(event)">
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="Place a URL here"
+          />
+          <input
+            type="submit"
+            value="Submit"
+            onclick="return Client.handleSubmit(event)"
+          />
+        </form>
+      </section>
+      <section id="results">
+        <h3>Results</h3>
+        <div id="container">
+          <div id="agreement">
+            Agreement: <span id="agreement-results"></span>
+          </div>
+          <div id="subjectivity">
+            Subjectivity: <span id="subjectivity-results"></span>
+          </div>
+          <div id="confidence">
+            Confidence: <span id="confidence-results"></span>
+          </div>
+          <div id="score">Score: <span id="score-results"></span></div>
+        </div>
+      </section>
+    </section>
+    <footer>
+      <div id="social">
+        <a href="https://www.linkedin.com/in/hesham-alghamdi/" target="_blank">
+          <i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/hesh-alghamdi" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+        <a href="https://twitter.com/Hesh_alghamdi" target="_blank">
+          <i class="fab fa-twitter"></i
+        ></a>
+      </div>
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+  </body>
+</html>
